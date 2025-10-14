@@ -18,7 +18,7 @@ config.window_background_opacity = 0.85
 -- window style
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = true
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.window_decorations = "RESIZE"
 
 -- platform specific config
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
