@@ -19,28 +19,28 @@ config.window_decorations = "RESIZE"
 
 -- platform specific config
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-    config.default_prog = { 'pwsh.exe', '-NoLogo' }
-    config.font_size = 12
-    config.window_background_opacity = 1
-    config.enable_tab_bar = true
-    config.window_decorations = "TITLE | INTEGRATED_BUTTONS | RESIZE"
+	config.default_prog = { "pwsh.exe", "-NoLogo" }
+	config.font_size = 12
+	config.window_background_opacity = 1
+	config.enable_tab_bar = true
+	config.window_decorations = "TITLE | INTEGRATED_BUTTONS | RESIZE"
 elseif wezterm.target_triple == "aarch64-apple-darwin" then
-    config.font_size = 16
-    config.window_background_opacity = 0.85
-    config.macos_window_background_blur = 20
+	config.font_size = 16
+	config.window_background_opacity = 0.85
+	config.macos_window_background_blur = 20
 elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
-    config.initial_rows = 50
-    config.initial_cols = 150
-    config.window_decorations = "NONE"
+	config.initial_rows = 50
+	config.initial_cols = 150
+	config.window_decorations = "NONE"
 
-    if desktop_env == "KDE" then
-        config.window_background_opacity = 0.85
-        config.kde_window_background_blur = true
-    elseif desktop_env == "GNOME" then
-        config.window_background_opacity = 1
-    end
+	if desktop_env == "KDE" then
+		config.window_background_opacity = 0.85
+		config.kde_window_background_blur = true
+	elseif desktop_env == "GNOME" then
+		config.window_background_opacity = 1
+	end
 else
-    -- add any breaking config here
+	-- add any breaking config here
 end
 
 return config
